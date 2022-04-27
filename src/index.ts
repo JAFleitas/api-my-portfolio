@@ -1,5 +1,7 @@
-import express from "express";
+import dotenv from "dotenv";
+import server from "./server";
+dotenv.config();
 
-const server = express();
+const PORT = process.env.PORT;
 
-server.listen(3001, () => console.log("listening in port 3001"));
+server.listen(PORT, () => console.log(`Listening in port ${PORT}`));
