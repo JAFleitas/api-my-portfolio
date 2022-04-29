@@ -18,6 +18,9 @@ interface ProjectModel
   description: string;
   webDeployed: string;
   apiWebDeployed: string;
+
+  gitLink: string;
+  image: string;
 }
 
 export default function (sequelize: Sequelize) {
@@ -42,6 +45,12 @@ export default function (sequelize: Sequelize) {
         type: DataTypes.STRING,
       },
       apiWebDeployed: {
+        type: DataTypes.STRING,
+      },
+      gitLink: {
+        type: DataTypes.STRING,
+      },
+      image: {
         type: DataTypes.STRING,
       },
     },
